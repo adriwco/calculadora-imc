@@ -13,7 +13,7 @@ ul{
 }
 /*----------------Header----------------*/
 header{
-  background: url('../img/img.jpg');
+  background: url('../img/img8.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -77,7 +77,6 @@ header{
   padding: 15px 30px;
   font-size: 1.5rem;
 }
-
 /*----------------Main----------------*/
 main{
   padding: 2rem 0rem;
@@ -148,22 +147,3 @@ main{
 }
 /*----------------Section----------------*/
 /*----------------Section----------------*/
-/*----------------Responsividade----------------*/
-@media (max-width: 700px){ 
-  .header-container{
-    flex-direction: column;
-    gap: 50px;
-  }
-  
-.header-introducao h1{
-  font-size: 3rem;
-}
-.header-introducao p{
-  font-size: 1rem;
-}
-}
-@media (max-width: 400px){
-  .header-introducao h1{
-    font-size: 2.5rem;
-  }
-}
