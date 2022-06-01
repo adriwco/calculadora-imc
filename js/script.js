@@ -1,10 +1,12 @@
 const submit = document.getElementById('submit');
+
 function imc(){
   const altura = document.getElementById('altura').value;
   const peso = document.getElementById('peso').value;
   const resultado = document.getElementById('resultado');
 
   if (altura!=='' && peso!==''){
+    
     const valorIMC = (peso / (altura * altura)).toFixed(2);
 
     let classificacao = '';
@@ -24,11 +26,9 @@ function imc(){
       classificacao = 'pré-obesidade';
     }else if(valorIMC < 34.5){
       classificacao = 'obesidade grau I';
-    }
-    else if(valorIMC < 39.9){
+    }else if(valorIMC < 39.9){
       classificacao = 'obesidade grau II';
-    }
-    else if(valorIMC > 40){
+    }else if(valorIMC > 40){
       classificacao = 'obesidade grau III';
     }
 
@@ -37,4 +37,6 @@ function imc(){
     resultado.innerHTML = '<p>Preencha os campos!</p>'
   }
 }
-submit.addEventListener('click', imc);
+
+submit.addEventListener('click', imc) 
+
