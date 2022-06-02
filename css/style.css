@@ -11,9 +11,19 @@ a{
 ul{
   list-style: none;
 }
+h1::after{
+  content: "";
+  position: absolute;
+  background-color: #FEC63E;
+  height: 0.3rem;
+  width: 100px;
+  left: 45%;
+  right: 45%;
+  top: 45px;
+}
 /*----------------Header----------------*/
 header{
-  background: url('../img/img8.jpg');
+  background: url('../img/img.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -69,6 +79,11 @@ header{
   line-height: 1;
   margin-top: -100px;
   padding: 0px 30px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.header-introducao h1::after{
+  top: 80px;
 }
 .header-introducao p{
   text-align: center;
@@ -77,42 +92,82 @@ header{
   padding: 15px 30px;
   font-size: 1.5rem;
 }
+#btn-mobile{
+  display: none;
+}
 /*----------------Main----------------*/
-main{
-  padding: 2rem 0rem;
+
+.main-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #FEC63E;
+}
+.main-descricao{
+  padding: 6rem 30px;
+}
+.main-descricao h2{
+  font-size: 1.8rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.main-descricao p{
+  margin: 0 auto;
+  font-size: 1.5rem;
+  max-width: 50rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.descricao-detalhe{
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.descricao-detalhe p{
+  position: absolute;
+  text-align: start;
+  right: 0;
+  font-size: 1.4rem;
+  color: rgb(116, 114, 114);
+}
+/*------------container e resultado-----------*/
+.container-cal-resul{
+  background: #FEC63E;
+}
+.main-grid{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.main-grid h2{
+  padding: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+  position: relative;
+  grid-column: 1/-1;
 }
 .container-main{
-  width: 20rem;
+  width: 100%;
   margin: 0 auto;
   background: #FEC63E;
   border-radius: 1rem;
   padding-bottom: 1rem;
 }
-.container-main h2{
-  padding: 1rem;
-  font-size: 1.8rem;
-  text-align: center;
-  position: relative;
-}
-.container-main h2::after{
-  content: "";
-  position: absolute;
-  background-color: black;
-  height: 0.25rem;
-  width: 100%;
-  left: 0;
-  top: 3.5rem;
-}
 #form{
   margin: 1rem 2.5rem;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  row-gap: 1rem;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
 }
 #form label{
   font-size: 1.3rem;
   font-weight: bold;
   margin-top: .25rem;
+  width: 100px;
+  text-align: right;
+  text-transform: uppercase;
+  position: relative;
 }
 #form input,select{
   border-color: transparent;
@@ -147,3 +202,45 @@ main{
 }
 /*----------------Section----------------*/
 /*----------------Section----------------*/
+/*----------------Responsividade----------------*/
+@media (max-width: 750px){
+  .header-container{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .header-introducao h1{
+    font-size: 3rem; 
+    margin-bottom: 10px;
+  }
+  .header-introducao p{
+    font-size: 1rem;
+  }
+  .header-introducao h1::after{
+    display: none;
+  }
+  .descricao-detalhe{
+    margin-bottom: 50px;
+  }
+  .main-descricao{
+    padding: 3rem 30px;
+  }
+  .main-grid{
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 550px){
+  .header-container{
+    flex-direction:row;
+  }
+ #btn-mobile{
+  display: block;
+}
+.header-nav{
+  display: none;
+}
+}
+@media (max-width: 400px){
+  .header-introducao h1{
+    font-size: 2.5rem;
+  }
+}
