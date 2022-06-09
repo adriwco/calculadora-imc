@@ -47,9 +47,11 @@ header{
   width: 80px;
 }
 .header-nav ul{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
   gap: 10px;
+  text-align: center;
+  margin-left: 5rem;
 }
 .header-nav a{
   display: block;
@@ -171,10 +173,16 @@ header{
   position: relative;
 }
 #form input,select{
-  border-color: transparent;
+  border: 3px solid transparent;
   border-radius: 0.25rem;
   height: 2rem;
   text-align: center;
+}
+#form select{
+  height: 2.4rem;
+}
+#form input:hover,select:hover{
+  border-color: #000;
 }
 #form button{
   grid-column: 1/-1;
@@ -194,6 +202,7 @@ header{
   box-shadow: 0 0 .5em black;
   border-radius: 0.25rem;
   padding: 1rem 0rem;
+  background: #fcd16c;
 }
 #resultado p{
   padding: 1rem 0.5rem;
@@ -206,8 +215,64 @@ header{
   justify-content: center;
   align-items: center;
 }
+.observacoes{
+  margin: 1rem 2.5rem;
+}
 /*----------------Section----------------*/
-/*----------------Section----------------*/
+.section{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 30px;
+}
+.significado h2{
+  font-size: 1.8rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+.significado h3{
+  padding: 1rem 0rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.significado p{
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  margin: 0rem 2rem;
+}
+.peso-indicadores button{
+  margin-top: .7rem;
+  height: 2rem;
+  width: 2rem;
+  border-color: transparent;
+  border-radius: 1rem;
+  background: #fcd16c;
+}
+.peso-indicadores button:hover{
+  background: #FEC63E;
+}
+.display-flex-indicadores{
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem 2rem;
+}
+/*---------------------------------*/
+#explicacao1, #explicacao2, #explicacao3, #explicacao4{
+  display: none;
+}
+.display-block{
+  display: block !important;
+}
+
+.teste{
+transition: 1s;
+padding-bottom: 10rem !important;
+}
+.teste2{
+  transition: 1s;
+  padding-bottom: 1rem !important;
+}
 /*----------------Responsividade----------------*/
 @media (max-width: 850px){
   #resultado .grid-resultado{
@@ -219,6 +284,10 @@ header{
   .header-container{
     flex-direction: column;
     gap: 50px;
+  }
+  
+  .header-nav ul{
+    margin-left: 0rem;
   }
   .header-introducao h1{
     font-size: 3rem; 
@@ -256,6 +325,9 @@ header{
 @media (max-width: 400px){
   .header-introducao h1{
     font-size: 2.5rem;
+  }
+  .display-flex-indicadores{
+  margin: 0rem .5rem;
   }
 }
 
