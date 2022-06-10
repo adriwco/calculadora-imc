@@ -1,10 +1,6 @@
 onload = () =>{
   document.getElementById("btn-mobile").onclick = () => toggleMenu();
   document.getElementById("submit").onclick = () => startCalculo();
-  document.getElementById("button1").onclick = () => abrirExplicacao1();
-  document.getElementById("button2").onclick = () => abrirExplicacao2();
-  document.getElementById("button3").onclick = () => abrirExplicacao3();
-  document.getElementById("button4").onclick = () => abrirExplicacao4();
 }
 function toggleMenu(){
   const nav = document.getElementById('nav');
@@ -73,25 +69,21 @@ function startCalculo(){
   resultado.innerHTML = `<p>O seu IMC é ${imc} e o estado nutricional está classificado como ${nivel}.</p>`;
 }
 
-function abrirExplicacao1(){
-  const explicacao = document.getElementById('teste');
-  if (explicacao.classList.contains('teste') == false){
-    explicacao.classList.add('teste');
-    explicacao.classList.remove('teste2');
-  } else {
-    explicacao.classList.add('teste2');
-    explicacao.classList.remove('teste');
-  }
-}
-function abrirExplicacao2(){
-  const explicacao = document.getElementById('explicacao2');
-  explicacao.classList.toggle('display-block');
-}
-function abrirExplicacao3(){
-  const explicacao = document.getElementById('explicacao3');
-  explicacao.classList.toggle('display-block');
-}
-function abrirExplicacao4(){
-  const explicacao = document.getElementById('explicacao4');
-  explicacao.classList.toggle('display-block');
-}
+const titulo = document.querySelectorAll(".header-h3");
+titulo.forEach(forEachTitulo => {
+  forEachTitulo.addEventListener("click", event => {  
+    const icone = document.querySelector(".header-h3.active");
+     if(icone && icone!==forEachTitulo) {
+       icone.classList.toggle("active");
+       icone.nextElementSibling.style.maxHeight = 0;
+     }
+    forEachTitulo.classList.toggle("active");
+    const container = forEachTitulo.nextElementSibling;
+    if(forEachTitulo.classList.contains("active")) {
+      container.style.maxHeight = container.scrollHeight + "px";
+    }
+    else {
+      container.style.maxHeight = 0;
+    }
+  });
+});

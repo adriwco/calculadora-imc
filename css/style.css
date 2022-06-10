@@ -186,9 +186,10 @@ header{
 }
 #form button{
   grid-column: 1/-1;
-  background: black;
+  background-color: #202124;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
   color: #FEC63E;
-  padding: 0.5rem;
+  padding: .7rem;
   cursor: pointer;
   font-size: 1rem;
   font-weight: bold;
@@ -230,48 +231,46 @@ header{
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
 }
-.significado h3{
-  padding: 1rem 0rem;
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.significado p{
-  padding-bottom: 1rem;
-  font-size: 1.5rem;
-  margin: 0rem 2rem;
-}
-.peso-indicadores button{
-  margin-top: .7rem;
-  height: 2rem;
-  width: 2rem;
-  border-color: transparent;
-  border-radius: 1rem;
-  background: #fcd16c;
-}
-.peso-indicadores button:hover{
-  background: #FEC63E;
-}
-.display-flex-indicadores{
-  display: flex;
-  justify-content: space-between;
-  margin: 0rem 2rem;
-}
-/*---------------------------------*/
-#explicacao1, #explicacao2, #explicacao3, #explicacao4{
-  display: none;
-}
-.display-block{
-  display: block !important;
-}
 
-.teste{
-transition: 1s;
-padding-bottom: 10rem !important;
+.item-indicadores {
+  background-color: #202124;
+  color: #ddd;
+  margin: 1rem 0;
+  padding: 0.5rem 0rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
 }
-.teste2{
-  transition: 1s;
-  padding-bottom: 1rem !important;
+.header-h3 {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.header-h3::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.header-h3.active::after {
+  content: "\2212";
+}
+.container-indicadores {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.p-indicadores{
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, orange, transparent) 1;
+}
+/*----------------footer----------------*/
+.footer{
+  background: #FEC63E;
+  height: 20rem;
 }
 /*----------------Responsividade----------------*/
 @media (max-width: 850px){
