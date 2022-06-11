@@ -1,11 +1,18 @@
-onload = () =>{
-  document.getElementById("btn-mobile").onclick = () => toggleMenu();
-  document.getElementById("submit").onclick = () => startCalculo();
-}
-function toggleMenu(){
+const btnMobile = document.getElementById("btn-mobile");
+function toggleMenu(event){
+  if(event.type === 'touchstart') event.preventDefault();
   const nav = document.getElementById('nav');
   nav.classList.toggle('active');
+  const active = nav.classList.contains('active');
+  event.currentTarget.setAttribute('aria-expanded', active);
+  if (active){
+    event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+  }else{
+    event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+  } 
 }
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
 
 let imcRules = {
   14: [3.5, 7.5, 10.5, 15.5, 19.5, 24.5, 29.5, 34.5, 39.99], // 24.5
@@ -56,6 +63,7 @@ function imcCalculo(altura, peso){
     return resultadoIMC;
 }
 
+const submitCalculo = document.getElementById("submit");
 function startCalculo(){
   const select = document.getElementById('sexo');
   const sexo = select.options[select.selectedIndex].value;
@@ -68,6 +76,7 @@ function startCalculo(){
   nivel = imcGenero(idade, imc, sexo); 
   resultado.innerHTML = `<p>O seu IMC é ${imc} e o estado nutricional está classificado como ${nivel}.</p>`;
 }
+submitCalculo.addEventListener('click', startCalculo);
 
 const titulo = document.querySelectorAll(".header-h3");
 titulo.forEach(forEachTitulo => {
