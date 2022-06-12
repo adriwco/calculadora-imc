@@ -14,6 +14,24 @@ function toggleMenu(event){
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
+const menuItems = document.querySelectorAll('#menu a[href^="#"]');
+function scrollToPosition(to){
+  // window.scroll({ top: to, behavior: "smooth", });
+  smoothScrollTo(0, to); // endX, endY, duration (milissegundos)
+}
+function getScrollTopByHref(element){
+  const id = element.getAttribute('href');
+  return document.querySelector(id).offsetTop;
+}
+function scrollIdOnClick(event){
+  event.preventDefault();
+  const to = getScrollTopByHref(event.target)/* - 80 (px) */;
+  scrollToPosition(to);
+}
+menuItems.forEach(item => {
+  item.addEventListener('click', scrollIdOnClick);
+})
+
 let imcRules = {
   14: [3.5, 7.5, 10.5, 15.5, 19.5, 24.5, 29.5, 34.5, 39.99], // 24.5
   24: [4.5, 8.5, 11.5, 16.5, 20.5, 25.5, 30.5, 35.5, 40.99], // 25.5
@@ -96,3 +114,39 @@ titulo.forEach(forEachTitulo => {
     }
   });
 });
+
+
+
+// Caso deseje suporte a browsers antigos / que não suportam scroll smooth nativo 
+// https://github.com/origamid/publico/tree/main/scroll-suave-para-link-interno-javascript-puro
+/**
+ * Smooth scroll animation
+ * @param {int} endX: destination x coordinate
+ * @param {int) endY: destination y coordinate
+ * @param {int} duration: animation duration in ms
+ */
+function smoothScrollTo(endX, endY, duration) {
+  const startX = window.scrollX || window.pageXOffset;
+  const startY = window.scrollY || window.pageYOffset;
+  const distanceX = endX - startX;
+  const distanceY = endY - startY;
+  const startTime = new Date().getTime();
+
+  duration = typeof duration !== 'undefined' ? duration : 400;
+
+  // Easing function
+  const easeInOutQuart = (time, from, distance, duration) => {
+    if ((time /= duration / 2) < 1) return distance / 2 * time * time * time * time + from;
+    return -distance / 2 * ((time -= 2) * time * time * time - 2) + from;
+  };
+
+  const timer = setInterval(() => {
+    const time = new Date().getTime() - startTime;
+    const newX = easeInOutQuart(time, startX, distanceX, duration);
+    const newY = easeInOutQuart(time, startY, distanceY, duration);
+    if (time >= duration) {
+      clearInterval(timer);
+    }
+    window.scroll(newX, newY);
+  }, 1000 / 60); // 60 fps
+};
