@@ -184,8 +184,11 @@ header{
 #form input:hover,select:hover{
   border-color: #000;
 }
-#form button{
+.buttons{
   grid-column: 1/-1;
+}
+#form button{
+  width: 49.3%;
   background-color: #202124;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
   color: #FEC63E;
@@ -197,6 +200,13 @@ header{
 }
 #form button:hover{ 
   box-shadow: 0 0 1em #fff;
+}
+#form #submit{
+  color: #fff;
+}
+#form #clean{
+  color: #fff;
+  background: #6e1b1b;
 }
 #resultado{
   margin: 1rem 2.5rem;
@@ -382,7 +392,14 @@ header{
   background: rgb(34, 34, 34);
   color: #fff;
 }
-
+.buttons{
+  display: grid;
+  gap: .3rem;
+  grid-template-columns: 1.1fr 2fr;
+}
+#form button{
+  width: 100%;
+}
 }
 
 @media (max-width: 400px){
