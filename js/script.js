@@ -16,8 +16,8 @@ btnMobile.addEventListener('touchstart', toggleMenu);
 
 const menuItems = document.querySelectorAll('#menu a[href^="#"]');
 function scrollToPosition(to){
-  // window.scroll({ top: to, behavior: "smooth", });
-  smoothScrollTo(0, to); // endX, endY, duration (milissegundos)
+  window.scroll({ top: to, behavior: "smooth", });
+  // smoothScrollTo(0, to); // endX, endY, duration (ms)
 }
 function getScrollTopByHref(element){
   const id = element.getAttribute('href');
@@ -119,7 +119,7 @@ titulo.forEach(forEachTitulo => {
 
 // Caso deseje suporte a browsers antigos / que não suportam scroll smooth nativo 
 // https://github.com/origamid/publico/tree/main/scroll-suave-para-link-interno-javascript-puro
-/**
+/*
  * Smooth scroll animation
  * @param {int} endX: destination x coordinate
  * @param {int) endY: destination y coordinate
