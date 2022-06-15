@@ -44,14 +44,12 @@ let imcRules = {
 
 let imcText = ["desnutrição grau V","desnutrição grau IV","desnutrição grau III","desnutrição grau II", "desnutrição grau I", "normal", "pré-obesidade", "obesidade grau I", "obesidade grau II", "obesidade grau III"];
 
-// age14to64()
-// age65orOlder()
-
 function imcGenero(idade, imc, sexo) {  
   let keys = Object.keys(imcRules);
   for (let k = 0; k < keys.length; k++) { 
 
     if (idade < 65){
+
       if (idade > keys[k]) { continue; }  
       let keyValue = imcRules[keys[k]];
       for (let t = 0; t < keyValue.length; t++ ) {
@@ -62,7 +60,9 @@ function imcGenero(idade, imc, sexo) {
           return imcText[9];
         }  
       }
+
     }else{ // idade >= 65
+
       let keyValue = imcRules[keys[6]];
       for (let t = 0; t < keyValue.length; t++ ){
         let value = sexo == 'masculino' ? keyValue[t] : keyValue[t]-0.5;
@@ -92,10 +92,16 @@ function startCalculo(){
   const peso = document.getElementById('peso').value;
   const idade = document.getElementById('idade').value;
   const resultado = document.getElementById('resultado');
-  var imc = imcCalculo(altura, peso, idade);
-  var nivel = '';
-  nivel = imcGenero(idade, imc, sexo); 
-  resultado.innerHTML = `<p>O seu IMC é ${imc} e o estado nutricional está classificado como ${nivel}.</p>`;
+
+  if((altura && peso && idade != '') && (sexo != 'selecione')){
+    var imc = imcCalculo(altura, peso, idade);
+    var nivel = '';
+    nivel = imcGenero(idade, imc, sexo); 
+    resultado.innerHTML = `<p>O seu IMC é ${imc} e o estado nutricional está classificado como ${nivel}.</p>`;
+  }else{
+    resultado.innerHTML = `<p>Preencha todos os campos!</p>`;
+  }
+  
 }
 submitCalculo.addEventListener('click', startCalculo);
 

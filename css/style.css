@@ -56,6 +56,9 @@ header{
   z-index: 5;
   font-weight: bold;
   transition: 1s;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .header-nav a:hover{
   transition: 1s;
@@ -77,15 +80,18 @@ header{
   position: relative;
   margin-bottom: 30px;
 }
-.header-introducao h1::after{
+.header-introducao b{
+  color: #FEC63E;
+}
+.header-introducao h1::before{
   content: "";
   position: absolute;
-  background-color: #FEC63E;
+  background: #FEC63E;
   height: 0.3rem;
   width: 100px;
-  left: 45%;
-  right: 45%;
-  top: 80px;
+  top: 90px;
+  left: calc(50% - 50px);
+  right: calc(50% - 50px);
 }
 .header-introducao p{
   text-align: center;
@@ -238,8 +244,7 @@ header{
 .significado h2{
   font-size: 1.8rem;
   text-align: center;
-  padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .item-indicadores {
@@ -301,10 +306,10 @@ header{
   position: absolute;
   content: '';
   background: #FEC63E;
-  width: 2.3rem;
+  width: 2.5rem;
   height: 0.2rem;
   top: 1.8rem;
-  right: 41%;
+  right: 40%;
 }
 .container-form-contato p{
   text-align: left;
@@ -395,7 +400,6 @@ header{
     flex-direction: column;
     gap: 50px;
   }
-  
   .header-nav ul{
     margin-left: 0rem;
   }
@@ -403,11 +407,8 @@ header{
     font-size: 3rem; 
     margin-bottom: 10px;
   }
-  .header-introducao p{
-    font-size: 1rem;
-  }
-  .header-introducao h1::after{
-    display: none;
+  .header-introducao h1::before{
+    top: 70px;
   }
   .descricao-detalhe{
     margin-bottom: 50px;
@@ -428,7 +429,11 @@ header{
   grid-column: 1/1;
 }
 }
-
+@media (max-width: 575.5px){
+  .header-introducao h1::before{
+    top: 110px;
+  }
+}
 @media (max-width: 550px){
   .header-container{
     flex-direction:row;
@@ -519,6 +524,9 @@ header{
 @media (max-width: 400px){
   .header-introducao h1{
     font-size: 2.5rem;
+  }
+  .header-introducao h1::before{
+    top: 90px;
   }
   .display-flex-indicadores{
   margin: 0rem .5rem;
