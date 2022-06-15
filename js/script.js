@@ -44,6 +44,9 @@ let imcRules = {
 
 let imcText = ["desnutrição grau V","desnutrição grau IV","desnutrição grau III","desnutrição grau II", "desnutrição grau I", "normal", "pré-obesidade", "obesidade grau I", "obesidade grau II", "obesidade grau III"];
 
+// age14to64()
+// age65orOlder()
+
 function imcGenero(idade, imc, sexo) {  
   let keys = Object.keys(imcRules);
   for (let k = 0; k < keys.length; k++) { 
