@@ -14,6 +14,32 @@ function toggleMenu(event){
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
+const scrollAnima = document.querySelector('[data-anima="scroll"]');
+const metadeWindow = window.innerHeight * 4.5;
+
+function animarScroll(){
+  const topoItem = scrollAnima.getBoundingClientRect().top;
+  const itemVisivel = topoItem - metadeWindow < 2.5;
+  const itemInvisivel = topoItem - 900 < 700;
+
+  console.log(topoItem);
+  console.log(itemInvisivel);
+
+  if(itemVisivel){
+    scrollAnima.classList.add('show-button');
+  }else{ 
+    scrollAnima.classList.remove('show-button');
+  }
+
+  if(itemInvisivel == true){
+    scrollAnima.classList.remove('show-button');
+  }
+
+}
+window.addEventListener('scroll', animarScroll);
+
+
+
 const menuItems = document.querySelectorAll('#menu a[href^="#"]');
 function scrollToPosition(to){
   window.scroll({ top: to, behavior: "smooth", });

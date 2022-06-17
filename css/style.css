@@ -301,8 +301,8 @@ h2::before{
 #container-contato{ 
   max-width: 1200px;
   margin: 0 auto;
-  padding: 6rem 30px 3rem 30px;
-  min-height: 15rem;
+  padding: 6rem 30px;
+  min-height: 10rem;
 }
 .container-contato{
   display: grid;
@@ -404,8 +404,39 @@ h2::before{
   text-align: center;
 }
 
-/*height 3rem footer*/
+/*----------------footer----------------*/
 
+footer{
+  background: #17181a;
+  color: #fff;
+}
+footer a{
+  color: #fff;
+  text-decoration: underline;
+}
+.footer{ 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 0rem;
+  text-align: center;
+  /*padding: 6rem 30px 3rem 30px;*/
+}
+/*----------------Voltar ao topo button----------------*/
+.topo{
+  background: rgb(247, 244, 244,.5);
+  position: fixed;
+  bottom: 20px;
+  right: -500px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show-button .topo{
+right: 20px;
+}
 /*----------------Responsividade----------------*/
 @media (max-width: 850px){
   #resultado .grid-resultado{
