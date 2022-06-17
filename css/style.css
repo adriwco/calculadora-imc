@@ -485,7 +485,7 @@ transition: .4s all;
   grid-column: 1/1;
 }
 }
-@media (max-width: 678px){
+@media (max-width: 592px){
   .main-descricao h2::before{
     top: 80px;
   }
@@ -603,13 +603,16 @@ transition: .4s all;
     margin-top: 8rem;
   }
 }
-
 @media (max-width: 386px){
   .main-descricao h2::before{
-    top: 115px;
+    top: 82px;
   }
 }
-
+@media (max-width: 350px){
+  .main-descricao h2::before{
+    top: 110px;
+  }
+}
 @media (max-width: 320px){
 .descricao-detalhe p{
     font-size: 1.2rem;
