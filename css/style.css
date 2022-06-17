@@ -433,9 +433,11 @@ footer a{
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: .4s all;
 }
 .show-button .topo{
 right: 20px;
+transition: .4s all;
 }
 /*----------------Responsividade----------------*/
 @media (max-width: 850px){

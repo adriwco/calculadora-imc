@@ -16,28 +16,21 @@ btnMobile.addEventListener('touchstart', toggleMenu);
 
 const scrollAnima = document.querySelector('[data-anima="scroll"]');
 const metadeWindow = window.innerHeight * 4.5;
-
 function animarScroll(){
   const topoItem = scrollAnima.getBoundingClientRect().top;
   const itemVisivel = topoItem - metadeWindow < 2.5;
   const itemInvisivel = topoItem - 900 < 700;
-
-  console.log(topoItem);
-  console.log(itemInvisivel);
 
   if(itemVisivel){
     scrollAnima.classList.add('show-button');
   }else{ 
     scrollAnima.classList.remove('show-button');
   }
-
   if(itemInvisivel == true){
     scrollAnima.classList.remove('show-button');
   }
-
 }
 window.addEventListener('scroll', animarScroll);
-
 
 
 const menuItems = document.querySelectorAll('#menu a[href^="#"]');
@@ -47,16 +40,28 @@ function scrollToPosition(to){
 }
 function getScrollTopByHref(element){
   const id = element.getAttribute('href');
-  return document.querySelector(id).offsetTop;
+  return document.querySelector(id).offsetTop; 
 }
 function scrollIdOnClick(event){
   event.preventDefault();
-  const to = getScrollTopByHref(event.target)/* - 80 (px) */;
+  const to = getScrollTopByHref(event.target)/* - 80 (px) */; 
   scrollToPosition(to);
 }
 menuItems.forEach(item => {
   item.addEventListener('click', scrollIdOnClick);
 })
+
+const smoothScrollFixed = document.querySelector('#scrollFixed a[href^="#"]');
+function getScrollByHrefFixed(element){
+  const id = element.getAttribute('href');
+  return document.querySelector(id); 
+}
+function scrollFiexed(event){
+  event.preventDefault();
+  const to = getScrollByHrefFixed(event.target); 
+  scrollToPosition(to);
+}
+smoothScrollFixed.addEventListener('click', scrollFiexed);
 
 let imcRules = {
   14: [3.5, 7.5, 10.5, 15.5, 19.5, 24.5, 29.5, 34.5, 39.99], // 24.5
