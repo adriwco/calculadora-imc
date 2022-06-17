@@ -123,9 +123,9 @@ h2::before{
   position: absolute;
   background: #FEC63E;
   height: 0.3rem;
-  width: 70px;
+  width: 4.5rem;
   top: 45px;
-  left: calc(50% - 35px);
+  left: calc(50% - 2.25rem);
 }
 .main-descricao p{
   margin: 0 auto;
@@ -566,9 +566,9 @@ h2::before{
   }
 }
 
-@media (max-width: 386px){
+@media (max-width: 370px){
   .main-descricao h2::before{
-    top: 112px;
+    top: 115px;
   }
 }
 
