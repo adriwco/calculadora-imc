@@ -604,7 +604,7 @@ transition: .4s all;
   }
 }
 
-@media (max-width: 370px){
+@media (max-width: 386px){
   .main-descricao h2::before{
     top: 115px;
   }
@@ -618,3 +618,4 @@ transition: .4s all;
   padding: 6rem 10px;
 }
 }
+
