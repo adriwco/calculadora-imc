@@ -15,11 +15,11 @@ btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
 const scrollAnima = document.querySelector('[data-anima="scroll"]');
-const metadeWindow = window.innerHeight * 4.5;
+const metadeWindow = window.innerHeight * 5;
 function animarScroll(){
   const topoItem = scrollAnima.getBoundingClientRect().top;
   const itemVisivel = topoItem - metadeWindow < 2.5;
-  const itemInvisivel = topoItem - 900 < 700;
+  const itemInvisivel = topoItem - 300 < 700;
 
   if(itemVisivel){
     scrollAnima.classList.add('show-button');

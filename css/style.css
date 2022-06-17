@@ -340,12 +340,17 @@ h2::before{
 .container-form-contato a::after{
   position: absolute;
   content: '';
-  background: #FEC63E;
-  height: 7px;
-  width: 7px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
-  left: 0px;
-  top: 5px;
+  left: -5px;
+  top: 1px;
+  background: url('../img/contato/telefone.png') no-repeat;
+  background-size: cover;
+}
+.container-form-contato .email::after{
+  background: url('../img/contato/email.png') no-repeat;
+  background-size: cover;
 }
 .redes-sociais{
   color: #fff;
