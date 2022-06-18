@@ -128,6 +128,9 @@ function imcGenero(idade, imc, sexo) {
 
 function imcCalculo(altura, peso) {
 	var resultadoIMC = (peso / (altura * altura)).toFixed(2);
+	if(resultadoIMC == 0.00){
+		resultadoIMC = NaN;
+	}
 	return resultadoIMC;
 }
 
@@ -145,7 +148,14 @@ function startCalculo() {
 		var imc = imcCalculo(altura, peso, idade);
 		var nivel = '';
 		nivel = imcGenero(idade, imc, sexo);
-		resultado.innerHTML = `<p>O seu IMC é ${imc} e o estado nutricional está classificado como ${nivel}.</p>`;
+
+		if(isFinite(imc)){
+			resultado.innerHTML = `<p>O seu IMC é ${imc} e o estado nutricional está classificado como ${nivel}.</p>`;
+		}else{
+			console.log(imc);
+			resultado.innerHTML = `<p>Informações inválidas!</p>`;
+		}
+
 	} else {
 		resultado.innerHTML = `<p>Preencha todos os campos!</p>`;
 	}
