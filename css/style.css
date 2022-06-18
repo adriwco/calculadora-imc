@@ -485,14 +485,9 @@ transition: .4s all;
   grid-column: 1/1;
 }
 }
-@media (max-width: 592px){
-  .main-descricao h2::before{
-    top: 80px;
-  }
-}
-@media (max-width: 575.5px){
-  .header-introducao h1::before{
-    top: 110px;
+@media (max-width: 750px){
+  h1::before,h2::before,h3::after{
+    display: none;
   }
 }
 @media (max-width: 550px){
@@ -552,7 +547,7 @@ transition: .4s all;
   border-bottom-right-radius: 1rem;
   max-height: 0;
   overflow: hidden;
-  transition: 0.6s;
+  transition: .3s;
 }
 #nav.active #menu{
   z-index: 10;
@@ -581,17 +576,9 @@ transition: .4s all;
   width: 3rem;
 }
 }
-@media (max-width: 449px){
-  .significado h2::before{
-    top: 75px;
-  }
-}
 @media (max-width: 400px){
   .header-introducao h1{
     font-size: 2.5rem;
-  }
-  .header-introducao h1::before{
-    top: 90px;
   }
   .display-flex-indicadores{
   margin: 0rem .5rem;
@@ -601,16 +588,6 @@ transition: .4s all;
   }
   .redes-sociais{
     margin-top: 8rem;
-  }
-}
-@media (max-width: 386px){
-  .main-descricao h2::before{
-    top: 82px;
-  }
-}
-@media (max-width: 350px){
-  .main-descricao h2::before{
-    top: 110px;
   }
 }
 @media (max-width: 320px){
