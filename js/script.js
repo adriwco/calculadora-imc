@@ -153,6 +153,17 @@ function startCalculo() {
 }
 submitCalculo.addEventListener('click', startCalculo);
 
+const typeNumberNegativo = document.querySelectorAll('[type="number"]');
+typeNumberNegativo.forEach(item => {
+	item.addEventListener('keypress', function(e){
+		const keyCode = (e.keyCode ? e.keyCode : e.wich);
+		if(keyCode == 45){
+			e.preventDefault();
+		}
+	});
+})
+$("#altura").mask("9.99", { reverse: true })
+
 const titulo = document.querySelectorAll(".header-h3");
 titulo.forEach(forEachTitulo => {
 	forEachTitulo.addEventListener("click", event => {

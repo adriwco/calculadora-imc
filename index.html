@@ -82,11 +82,11 @@
               <option value="feminino">Feminino</option>
             </select>
             <label for="idade">Idade:</label>
-            <input type="number" id="idade" placeholder="Idade...">
+            <input type="number" id="idade" placeholder="Idade..." min="0">
             <label for="altura">Altura:</label>
-            <input type="number" id="altura" placeholder="Metros...">
+            <input type="number" id="altura" placeholder="Metros..." min="0">
             <label for="peso">Peso:</label>
-            <input type="number" id="peso" placeholder="Quilogramas...">
+            <input type="number" id="peso" placeholder="Quilogramas..." min="0">
             <div class="buttons">
               <button type="reset" id="clean">Limpar</button>
               <button type="button" id="submit">Calcular</button>
@@ -216,6 +216,8 @@
     </a>
   </div>
 
+  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.mask.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
 
