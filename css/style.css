@@ -526,6 +526,10 @@ footer a{
     position: absolute;
     top: 7px;
   }
+  .header-nav ul{
+    grid-template-columns: 1fr;
+    gap: .5px;
+  }
   .menu{
     display: block;
     position: absolute;
