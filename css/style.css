@@ -140,10 +140,14 @@ h2::before{
 }
 .descricao-detalhe p{
   position: absolute;
+  max-width: 230px;
   text-align: start;
   right: 0;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: rgb(116, 114, 114);
+}
+.formula{
+  white-space: nowrap;
 }
 /*------------container e resultado-----------*/
 .container-cal-resul{
@@ -368,7 +372,7 @@ h2::before{
   margin: 1rem auto;
   color: #fff;
 }
-.navegacao #menu{
+.navegacao .menu{
   color: #fff !important;
   position: relative;
   z-index: 0;
@@ -376,17 +380,17 @@ h2::before{
   background: transparent;
   top: 0px;
 }
-.navegacao #menu li{
+.navegacao .menu li{
   margin-bottom: 1rem;
 }
-.navegacao #menu a{
+.navegacao .menu a{
   padding: 0rem 1.5rem;
   color: #fff;
   background: transparent;
   text-decoration: underline;
   position: relative;
 }
-.navegacao #menu a::after{
+.navegacao .menu a::after{
   position: absolute;
   content: '';
   background: #FEC63E; 
@@ -511,18 +515,18 @@ footer a{
     transition: .3s;
     position: relative;
   }
-  #nav.active #hamburger{
+  .nav.active #hamburger{
     border-top: transparent;
   }
-  #nav.active #hamburger::before{
+  .nav.active #hamburger::before{
     transform: rotate(135deg);
   }
-  #nav.active #hamburger::after{
+  .nav.active #hamburger::after{
     transform: rotate(-135deg);
     position: absolute;
     top: 7px;
   }
-  #menu{
+  .menu{
     display: block;
     position: absolute;
     width: 100%;
@@ -537,16 +541,16 @@ footer a{
     overflow: hidden;
     transition: .3s;
   }
-  #nav.active #menu{
+  .nav.active .menu{
     z-index: 10;
     max-height: 15rem;
   }
-  #menu a{
+  .menu a{
     background: #000;
     border-radius: 1rem;
     transition: .5s;
   }
-  #menu a:hover{
+  .menu a:hover{
     transition: .5s;
     background: rgb(34, 34, 34);
     color: #fff;

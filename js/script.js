@@ -1,7 +1,7 @@
 const btnMobile = document.getElementById("btn-mobile");
 function toggleMenu(event){
   if(event.type === 'touchstart') event.preventDefault();
-  const nav = document.getElementById('nav');
+  const nav = document.querySelector('nav');
   nav.classList.toggle('active');
   const active = nav.classList.contains('active');
   event.currentTarget.setAttribute('aria-expanded', active);
@@ -32,8 +32,7 @@ function animarScroll(){
 }
 window.addEventListener('scroll', animarScroll);
 
-
-const menuItems = document.querySelectorAll('#menu a[href^="#"]');
+const menuItems = document.querySelectorAll('.menu a[href^="#"]');
 function scrollToPosition(to){
   window.scroll({ top: to, behavior: "smooth", });
   // smoothScrollTo(0, to); // endX, endY, duration (ms)
@@ -50,6 +49,7 @@ function scrollIdOnClick(event){
 menuItems.forEach(item => {
   item.addEventListener('click', scrollIdOnClick);
 })
+
 
 const smoothScrollFixed = document.querySelector('#scrollFixed a[href^="#"]');
 function getScrollByHrefFixed(element){

@@ -4,8 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og: type" content="website" />
+  <meta property="og: title" content="Calculadora do Índice de Massa Corporal" />
+  <meta property="og: description" content="O IMC é uma medida usada para calcular se uma pessoa está no peso ideal." />
+  <meta property="og: url" content="http://site.com" />
+  <meta property="og: image" content="http://site.com/img/favicon//apple-icon-72x72.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="./img/favicon//ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+
   <title>Calculadora - IMC</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="./img/favicon//apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./img/favicon//apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./img/favicon//apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon//apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./img/favicon//apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./img/favicon//apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./img/favicon//apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon//apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon//apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon//android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon//favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon//favicon-16x16.png">
+  <link rel="manifest" href="./img/favicon//manifest.json">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -15,14 +40,14 @@
       <div class="header-container">
         <img src="./img/simbolo.svg" alt="IMC">
         <div>
-          <nav id="nav" class="header-nav">
-            <ul id="menu" role="menu">
+          <nav class="nav header-nav">
+            <ul id="controls" class="menu" role="menu">
               <li><a href="#descricao">Introdução</a></li>
               <li><a href="#imc">IMC</a></li>
               <li><a href="#significado">Explicação</a></li>
               <li><a href="#contato">Contato</a></li>
             </ul>
-            <button aria-label="Abrir Menu" type="button" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <button aria-label="Abrir Menu" type="button" id="btn-mobile" aria-haspopup="true" aria-controls="controls" aria-expanded="false">
               <span id="hamburger"></span>
             </button>
           </nav>
@@ -37,9 +62,12 @@
   <main>
     <div id="descricao" class="main-descricao">
       <h2>Calculadora do Índice de Massa Corporal</h2>
-      <p>O índice de massa corporal (IMC) pode ajudar a identificar qual é o seu peso ideal com base na sua idade, altura e sexo biológico. Com este indicador pode identificar as melhores rotinas para o controlo de peso. Inclusivamente identificar se está com o peso baixo ou com determinado nível de obesidade. A fórmula para encontrar o seu peso ideal:</br><strong>y / x²</strong>.</p>
+      <p>O índice de massa corporal (IMC) pode ajudar a identificar qual é o seu peso ideal com base na sua idade, altura e sexo biológico. Com este indicador pode identificar as melhores rotinas para o controlo de peso. Inclusivamente identificar se está com o peso baixo ou com determinado nível de obesidade. A fórmula para encontrar o seu peso ideal: <strong class="formula">y / x²</strong>.</p>
       <div class="descricao-detalhe">
-        <p><strong>y</strong> = massa corporal em quilos.</br><strong>x</strong> = altura em metros.</p>
+        <p>
+          <strong class="formula">y = massa corporal em quilos.</strong>
+          <strong class="formula">x = altura em metros.</strong>
+        </p>
       </div>
     </div>
     <div id="imc" class="container-cal-resul">
@@ -48,7 +76,7 @@
         <div class="container-main">
           <form id="form">
             <label for="sexo">Sexo: </label>
-            <select name="sexo" id="sexo" placeholder="Selecione...">
+            <select name="sexo" id="sexo">
               <option value="selecione" selected disabled>Selecione...</option>
               <option value="masculino">Masculino</option>
               <option value="feminino">Feminino</option>
@@ -129,9 +157,9 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
+    </div>
   </section>
   <section id="contato">
     <div id="container-contato">
@@ -150,8 +178,8 @@
           <div class="navegacao">
             <div class="container-form-navegacao">
               <h3>Navegação</h3>
-              <nav id="nav">
-                <ul id="menu" role="menu">
+              <nav class="nav">
+                <ul class="menu" role="menu">
                   <li><a href="#header">Início</a></li>
                   <li><a href="#descricao">Introdução</a></li>
                   <li><a href="#imc">IMC</a></li>
@@ -176,16 +204,16 @@
   </section>
   <footer>
     <div class="footer">
-      <p>&copy Adriano Weverton Cruz Oliveira <br> Student of <a href="https://www.origamid.com/" target="_blank">Origamid</a> & <a href="https://descomplica.com.br/faculdade/" target="_blank">Uncomplicates Digital College</a></p>
+      <p>&copy; Adriano Weverton Cruz Oliveira <br> Student of <a href="https://www.origamid.com/" target="_blank">Origamid</a> & <a href="https://descomplica.com.br/faculdade/" target="_blank">Uncomplicates Digital College</a></p>
     </div>
   </footer>
 
   <div id="scrollFixed" data-scroll="suave" data-anima="scroll">
-      <a href="#header">
-        <div class="topo">
-          <img src="./img/circle-up.svg" alt="voltar ao topo">
-        </div>
-      </a>
+    <a href="#header">
+      <div class="topo">
+        <img src="./img/circle-up.svg" alt="voltar ao topo">
+      </div>
+    </a>
   </div>
 
   <script src="./js/script.js"></script>
