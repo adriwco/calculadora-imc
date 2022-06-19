@@ -347,11 +347,11 @@ h2::before{
   border-radius: 50%;
   left: -5px;
   top: 1px;
-  background: url('../img/contato/telefone.png') no-repeat;
+  background: url('../img/contato/telefone.svg') no-repeat;
   background-size: cover;
 }
 .container-form-contato .email::after{
-  background: url('../img/contato/email.png') no-repeat;
+  background: url('../img/contato/email.svg') no-repeat;
   background-size: cover;
 }
 .redes-sociais{
