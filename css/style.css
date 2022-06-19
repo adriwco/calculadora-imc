@@ -158,7 +158,7 @@ h2::before{
   margin: 0rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 6rem 1rem; /*problema margem estorando 19/06/2022*/
+  padding: 6rem 1rem;
 }
 .main-grid h2{
   margin-bottom: 2.5rem;
@@ -474,6 +474,10 @@ footer a{
   }
   .descricao-detalhe{
     margin-bottom: 3.125rem;
+  }
+  .descricao-detalhe p{
+    left: 0rem;
+    font-size: 1.05rem !important;
   }
   .main-descricao{
     padding: 3rem 1.875rem;
