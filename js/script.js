@@ -152,7 +152,6 @@ function startCalculo() {
 		if(isFinite(imc)){
 			resultado.innerHTML = `<p>O seu IMC é ${imc} e o estado nutricional está classificado como ${nivel}.</p>`;
 		}else{
-			console.log(imc);
 			resultado.innerHTML = `<p>Informações inválidas!</p>`;
 		}
 
