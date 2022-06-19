@@ -311,6 +311,9 @@ h2::before{
   grid-template-columns: repeat(3,1fr);
   gap: 1rem;
 }
+.container-contato a:hover{
+  color: #FEC63E !important;
+}
 .container-contato h3{
   text-align: center;
   margin-bottom: 1.5rem;
@@ -420,6 +423,9 @@ footer a{
   margin: 0rem auto;
   padding: 2.5rem 0rem;
   text-align: center;
+}
+.footer a:hover{
+  color: #FEC63E;
 }
 /*----------------Voltar ao topo button----------------*/
 .topo{
