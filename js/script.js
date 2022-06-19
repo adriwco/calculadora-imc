@@ -192,7 +192,6 @@ titulo.forEach(forEachTitulo => {
 });
 
 
-
 // Caso deseje suporte a browsers antigos / que não suportam scroll smooth nativo 
 // https://github.com/origamid/publico/tree/main/scroll-suave-para-link-interno-javascript-puro
 /*
@@ -226,3 +225,32 @@ function smoothScrollTo(endX, endY, duration) {
 		window.scroll(newX, newY);
 	}, 1000 / 60); // 60 fps
 };
+
+
+/*
+O código obtém todas as tags IMG com a classe SVG e substitui com o SVG INLINE a partir do arquivo vinculado no atributo SRC.
+*/
+/*  Replace all SVG images with inline SVG */
+$('img.svg').each(function(){
+	var $img = $(this);
+	var imgID = $img.attr('id');
+	var imgClass = $img.attr('class');
+	var imgURL = $img.attr('src');
+	
+	$.get(imgURL, function(data) {
+			// Get the SVG tag, ignore the rest
+			var $svg = $(data).find('svg');
+			// Add replaced image's ID to the new SVG
+			if (typeof imgID !== 'undefined') {
+					$svg = $svg.attr('id', imgID);
+			}
+			// Add replaced image's classes to the new SVG
+			if (typeof imgClass !== 'undefined') {
+					$svg = $svg.attr('class', imgClass+' replaced-svg');
+			}
+			// Remove any invalid XML tags as per http://validator.w3.org
+			$svg = $svg.removeAttr('xmlns:a');
+			// Replace image with new SVG
+			$img.replaceWith($svg);
+		});
+	});
