@@ -23,42 +23,42 @@ header{
   background-color: rgba(0, 0, 0,.5);
 }
 .header-container{
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 75rem;
+  margin: 0rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 30px;
+  padding: 0.313rem 1.875rem;
 }
 .header-container img{
   background: #FEC63E;
   border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  border: 3px solid #fcd16c;
-  box-shadow: 0 2px 5px 0 rgba(255, 0, 0, 0.25);
-  margin: 5px 0rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  border: 0.188rem solid #fcd16c;
+  box-shadow: 0 0.125rem 0.313rem 0 rgba(255, 0, 0, 0.25);
+  margin: 0.313rem 0rem;
 }
 .header-nav ul{
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 10px;
+  gap: 0.625rem;
   text-align: center;
   margin-left: 5rem;
 }
 .header-nav a{
   display: block;
-  padding: 10px 20px;
-  border: 3px solid #FEC63E;
+  padding: 0.625rem 1.25rem;
+  border: 0.188rem solid #FEC63E;
   color: #FEC63E;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   text-transform: uppercase;
   z-index: 5;
   font-weight: bold;
   transition: 1s;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(0.625rem);
+  -webkit-backdrop-filter: blur(0.625rem);
 }
 .header-nav a:hover{
   transition: 1s;
@@ -66,8 +66,8 @@ header{
   color: #000;
 }
 .header-introducao{
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 75rem;
+  margin: 0rem auto;
   padding: 12rem 0rem;
   color: #fff;
   text-align: center;
@@ -75,10 +75,10 @@ header{
 .header-introducao h1{
   font-size: 4rem;
   line-height: 1;
-  margin-top: -100px;
-  padding: 0px 30px;
+  margin-top: -6.25rem;
+  padding: 0rem 1.875rem;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 .header-introducao b{
   color: #FEC63E;
@@ -88,15 +88,15 @@ header{
   position: absolute;
   background: #FEC63E;
   height: 0.3rem;
-  width: 80px; /*70*/
-  top: 90px;
-  left: calc(50% - 40px);
+  width: 5rem; /*70*/
+  top: 5.625rem;
+  left: calc(50% - 2.5rem);
 } 
 .header-introducao p{
   text-align: center;
   max-width: 50rem;
-  margin: 0 auto;
-  padding: 15px 30px;
+  margin: 0rem auto;
+  padding: 0.938rem 1.875rem;
   font-size: 1.5rem;
 }
 #btn-mobile{
@@ -109,7 +109,7 @@ header{
   background: #FEC63E;
 }
 .main-descricao{
-  padding: 6rem 30px;
+  padding: 6rem 1.875rem;
 }
 .main-descricao h2{
   font-size: 1.8rem;
@@ -123,26 +123,26 @@ h2::before{
   background: #FEC63E;
   height: 0.3rem;
   width: 4.5rem;
-  top: 45px;
+  top: 2.813rem;
   left: calc(50% - 2.25rem);
 }
 .main-descricao p{
-  margin: 0 auto;
+  margin: 0rem auto;
   font-size: 1.5rem;
   max-width: 50rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 .descricao-detalhe{
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 75rem;
+  margin: 0rem auto;
   position: relative;
 }
 .descricao-detalhe p{
   position: absolute;
-  max-width: 230px;
+  max-width: 14.375rem;
   text-align: start;
-  right: 0;
+  right: 0rem;
   font-size: 1.1rem;
   color: rgb(116, 114, 114);
 }
@@ -154,11 +154,11 @@ h2::before{
   background: #FEC63E;
 }
 .main-grid{
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 75rem;
+  margin: 0rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 6rem 30px;
+  padding: 6rem 1.875rem;
 }
 .main-grid h2{
   margin-bottom: 2.5rem;
@@ -172,7 +172,7 @@ h2::before{
 }
 .container-main{
   width: 100%;
-  margin: 0 auto;
+  margin: 0rem auto;
   background: #FEC63E;
   border-radius: 1rem;
   padding-bottom: 1rem;
@@ -187,13 +187,13 @@ h2::before{
   font-size: 1.3rem;
   font-weight: bold;
   margin-top: .25rem;
-  width: 100px;
+  width: 6.25rem;
   text-align: right;
   text-transform: uppercase;
   position: relative;
 }
 #form input,select{
-  border: 3px solid transparent;
+  border: 0.188rem solid transparent;
   border-radius: 0.25rem;
   height: 2rem;
   text-align: center;
@@ -210,7 +210,7 @@ h2::before{
 #form button{
   width: 49.3%;
   background-color: #202124;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 0.125rem 0.313rem 0 rgba(0,0,0,0.25);
   color: #FEC63E;
   padding: .7rem;
   cursor: pointer;
@@ -251,9 +251,9 @@ h2::before{
 }
 /*----------------Section----------------*/
 .section{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 6rem 30px;
+  max-width: 75rem;
+  margin: 0rem auto;
+  padding: 6rem 1.875rem;
 }
 .significado h2{
   font-size: 1.8rem;
@@ -264,10 +264,10 @@ h2::before{
 .item-indicadores {
   background-color: #202124;
   color: #ddd;
-  margin: 1rem 0;
+  margin: 1rem 0rem;
   padding: 0.3rem 0rem;
   border-radius: 0.25rem;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 0.125rem 0.313rem 0 rgba(0,0,0,0.25);
 }
 .header-h3 {
   padding: 0.5rem 3rem 0.5rem 1rem;
@@ -286,14 +286,14 @@ h2::before{
   content: "\2212";
 }
 .container-indicadores {
-  max-height: 0;
+  max-height: 0rem;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
 .p-indicadores{
   padding: 1rem;
   line-height: 1.5rem;
-  border-top: 1px solid;
+  border-top: 0.063rem solid;
   border-image: linear-gradient(to right, transparent, orange, transparent) 1;
 }
 /*----------------Section Contato----------------*/
@@ -301,9 +301,9 @@ h2::before{
   background: #202124;
 }
 #container-contato{ 
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 6rem 30px;
+  max-width: 75rem;
+  margin: 0rem auto;
+  padding: 6rem 1.875rem;
   min-height: 10rem;
 }
 .container-contato{
@@ -335,18 +335,18 @@ h2::before{
   text-align: left;
   padding-bottom: 1rem;
   width: 10rem;
-  margin: 0 auto;
+  margin: 0rem auto;
   padding-left: 1.2rem;
   position: relative;
 }
 .container-form-contato a::after{
   position: absolute;
   content: '';
-  height: 20px;
-  width: 20px;
+  height: 0.938rem;
+  width: 0.938rem;
   border-radius: 50%;
-  left: -5px;
-  top: 1px;
+  left: -0.313rem;
+  top: 0.188rem;
   background: url('../img/contato/telefone.svg') no-repeat;
   background-size: cover;
 }
@@ -361,9 +361,9 @@ h2::before{
   text-align: center;
 }
 .redes-sociais img{
-  border: 2px solid #FEC63E;
+  border: 0.125rem solid #FEC63E;
   border-radius: 5rem;
-  box-shadow: 0 2px 15px 0 rgba(238, 235, 235, 0.25);
+  box-shadow: 0 0.125rem 0.938rem 0 rgba(238, 235, 235, 0.25);
   margin: .2rem;
   width: 3rem;
 }
@@ -378,7 +378,7 @@ h2::before{
   z-index: 0;
   overflow: visible;
   background: transparent;
-  top: 0px;
+  top: 0rem;
 }
 .navegacao .menu li{
   margin-bottom: 1rem;
@@ -394,11 +394,11 @@ h2::before{
   position: absolute;
   content: '';
   background: #FEC63E; 
-  height: 7px;
-  width: 7px;
+  height: 0.438rem;
+  width:  0.438rem;
   border-radius: 50%;
-  left: 5px;
-  top: 5px;
+  left: 0.313rem;
+  top: 0.313rem;
 }
 .container-form-contato{
   width: 12rem;
@@ -416,20 +416,19 @@ footer a{
   text-decoration: underline;
 }
 .footer{ 
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 75rem;
+  margin: 0rem auto;
   padding: 2.5rem 0rem;
   text-align: center;
-  /*padding: 6rem 30px 3rem 30px;*/
 }
 /*----------------Voltar ao topo button----------------*/
 .topo{
   background: rgb(247, 244, 244,.5);
   position: fixed;
-  bottom: 20px;
-  right: -500px;
-  height: 50px;
-  width: 50px;
+  bottom: 1.25rem;
+  right: -31.25rem;
+  height: 3.125rem;
+  width: 3.125rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -437,35 +436,35 @@ footer a{
   transition: .4s all;
 }
 .show-button .topo{
-  right: 20px;
+  right: 1.25rem;
   transition: .4s all;
 }
 /*----------------Responsividade----------------*/
-@media (max-width: 850px){
+@media (max-width: 53.125rem){
   #resultado .grid-resultado{
     flex-direction: column;
   }
 }
-@media (max-width: 750px){
+@media (max-width: 46.875rem){
   .header-container{
     flex-direction: column;
-    gap: 50px;
+    gap: 3.125rem;
   }
   .header-nav ul{
     margin-left: 0rem;
   }
   .header-introducao h1{
     font-size: 3rem; 
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
   }
   .header-introducao h1::before{
-    top: 70px;
+    top: 4.375rem;
   }
   .descricao-detalhe{
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
   }
   .main-descricao{
-    padding: 3rem 30px;
+    padding: 3rem 1.875rem;
   }
   .main-grid{
     grid-template-columns: 1fr;
@@ -482,11 +481,11 @@ footer a{
     display: none;
   }
 }
-@media (max-width: 550px){
+@media (max-width: 34.375rem){
   .header-container{
     flex-direction:row;
     background: #FEC63E;
-    padding: .2rem 30px;
+    padding: .2rem 1.875rem;
   }
   .header-introducao h1{
     margin-top: .3rem;
@@ -500,18 +499,18 @@ footer a{
     cursor: pointer;
   }
   #hamburger{
-    width: 20px;
-    border-top: 4px solid;
+    width: 1.25rem;
+    border-top: 0.25rem solid;
     display: block;
   }
   #hamburger::after, #hamburger::before{
     content: '';
-    width: 20px;
+    width: 1.25rem;
     display: block;
-    border-top: 2px solid;
-    height: 2px;
+    border-top: 0.125rem solid;
+    height: 0.125rem;
     background: currentColor;
-    margin-top: 5px;
+    margin-top: 0.313rem;
     transition: .3s;
     position: relative;
   }
@@ -524,18 +523,18 @@ footer a{
   .nav.active #hamburger::after{
     transform: rotate(-135deg);
     position: absolute;
-    top: 7px;
+    top: 0.438rem;
   }
   .header-nav ul{
     grid-template-columns: 1fr;
-    gap: .5px;
+    gap: 0.313rem;
   }
   .menu{
     display: block;
     position: absolute;
     width: 100%;
-    top: 80px;
-    right: 0px;
+    top: 5rem;
+    right: 0rem;
     z-index: -1;
     background: #FEC63E;
     padding-bottom: 1rem;
@@ -572,7 +571,7 @@ footer a{
     width: 3rem;
   }
 }
-@media (max-width: 400px){
+@media (max-width: 25rem){
   .header-introducao h1{
     font-size: 2.5rem;
   }
@@ -586,11 +585,11 @@ footer a{
     margin-top: 8rem;
   }
 }
-@media (max-width: 320px){
+@media (max-width: 20rem){
   .descricao-detalhe p{
     font-size: 1.2rem;
   }  
   .main-grid{
-    padding: 6rem 10px;
+    padding: 6rem 0.625rem;
   }
 }
