@@ -158,7 +158,7 @@ h2::before{
   margin: 0rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 6rem 1.875rem;
+  padding: 6rem 1rem; /*problema margem estorando 19/06/2022*/
 }
 .main-grid h2{
   margin-bottom: 2.5rem;
