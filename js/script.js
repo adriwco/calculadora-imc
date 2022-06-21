@@ -161,16 +161,52 @@ function startCalculo() {
 }
 submitCalculo.addEventListener('click', startCalculo);
 
-const typeNumberNegativo = document.querySelectorAll('[type="number"]');
-typeNumberNegativo.forEach(item => {
-	item.addEventListener('keypress', function(e){
-		const keyCode = (e.keyCode ? e.keyCode : e.wich);
-		if(keyCode == 45){
-			e.preventDefault();
+
+$(document).ready(function(){
+  $('input').bind('cut copy paste',function(e) {
+      e.preventDefault();
+  });
+});
+$("#idade").mask("999", { 
+	onKeyPress: function(val) {
+		if (val > 150) {
+			$('#idade').val('');
 		}
-	});
-})
-$("#altura").mask("9.99", { reverse: true })
+	}
+});
+$("#altura").mask("9.99", { 
+	onKeyPress: function(val) {
+			if (val.replace(',', '.') > 3.99) {
+				$('#altura').val('');
+			}
+		}
+});
+$("#peso").mask("999.99", { 
+	onKeyPress: function(val) {
+			if (val.replace(',', '.') > 450.00) {
+				$('#peso').val('');
+			}
+		}
+});
+
+// console.log('𐩕'.codePointAt(0));   
+var inputNumber = document.querySelectorAll('[type="number"]');
+inputNumber.forEach(numberforEach => {
+	numberforEach.addEventListener('keypress', event =>{
+		var theEvent = event || window.event;
+		var key = theEvent.keyCode || theEvent.which;
+		key = String.fromCharCode( key );
+		if(numberforEach.id == 'peso'){
+			var regex = /^[0-9.,]+$/;
+		}else{
+			var regex = /^[0-9]+$/;
+		}
+		if(!regex.test(key)) {
+			 if(theEvent.preventDefault) theEvent.preventDefault();
+		}
+	});	
+});
+
 
 const titulo = document.querySelectorAll(".header-h3");
 titulo.forEach(forEachTitulo => {
@@ -187,6 +223,7 @@ titulo.forEach(forEachTitulo => {
 		} else {
 			container.style.maxHeight = 0;
 		}
+
 	});
 });
 
