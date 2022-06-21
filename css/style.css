@@ -91,6 +91,7 @@ header{
   width: 5rem; /*70*/
   top: 5.625rem;
   left: calc(50% - 2.5rem);
+  border-radius: 1rem;
 } 
 .header-introducao p{
   text-align: center;
@@ -125,6 +126,7 @@ h2::before{
   width: 4.5rem;
   top: 2.813rem;
   left: calc(50% - 2.25rem);
+  border-radius: 1rem;
 }
 .main-descricao p{
   margin: 0rem auto;
@@ -327,6 +329,7 @@ h2::before{
   height: 0.2rem;
   top: 1.8rem;
   right: 40%;
+  border-radius: 1rem;
 }
 .container-form-contato a{
   color: #fff;
