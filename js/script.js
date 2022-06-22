@@ -169,7 +169,7 @@ $(document).ready(function(){
 });
 $("#idade").mask("999", { 
 	onKeyPress: function(val) {
-		if (val > 150) {
+		if ((val > 150) || (val.charAt(0) == 0)) {
 			$('#idade').val('');
 		}
 	}
@@ -183,7 +183,7 @@ $("#altura").mask("9.99", {
 });
 $("#peso").mask("999.99", { 
 	onKeyPress: function(val) {
-			if (val.replace(',', '.') > 450.00) {
+			if ((val.replace(',', '.') > 450.00) || (val.charAt(0) == 0)) {
 				$('#peso').val('');
 			}
 		}
@@ -207,7 +207,6 @@ inputNumber.forEach(numberforEach => {
 	});	
 });
 
-
 const titulo = document.querySelectorAll(".header-h3");
 titulo.forEach(forEachTitulo => {
 	forEachTitulo.addEventListener("click", event => {
@@ -226,7 +225,6 @@ titulo.forEach(forEachTitulo => {
 
 	});
 });
-
 
 // Caso deseje suporte a browsers antigos / que não suportam scroll smooth nativo 
 // https://github.com/origamid/publico/tree/main/scroll-suave-para-link-interno-javascript-puro
