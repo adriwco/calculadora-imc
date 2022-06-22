@@ -176,7 +176,13 @@ $("#idade").mask("999", {
 });
 $("#altura").mask("9.99", { 
 	onKeyPress: function(val) {
-			if (val.replace(',', '.') > 3.99) {
+			const valComPonto = val.replace(',', '.');
+			for(let numChar = 1; numChar <= 4; numChar++ ){
+				if((val.charAt(2) == numChar) && (val.charAt(0) == 0) || (val.charAt(3) >= 1 && val.charAt(3) < 9)){
+					$('#altura').val('');
+				}
+			}
+			if (valComPonto > 3.99) {
 				$('#altura').val('');
 			}
 		}
