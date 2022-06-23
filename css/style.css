@@ -38,6 +38,7 @@ header{
   border: 0.188rem solid #fcd16c;
   box-shadow: 0 0.125rem 0.313rem 0 rgba(255, 0, 0, 0.25);
   margin: 0.313rem 0rem;
+  z-index: 15;
 }
 .header-nav ul{
   display: grid;
@@ -464,6 +465,8 @@ footer a{
   .header-container{
     flex-direction: column;
     gap: 3.125rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
   .header-nav ul{
     margin-left: 0rem;
@@ -546,17 +549,18 @@ footer a{
   }
   .header-nav ul{
     grid-template-columns: 1fr;
-    gap: 0.313rem;
+    gap: 0.05rem;
   }
   .menu{
     display: block;
     position: absolute;
     width: 100%;
-    top: 5rem;
+    top: 4.3rem;
     right: 0rem;
     z-index: -1;
     background: #FEC63E;
-    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: .6rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     max-height: 0;
@@ -571,6 +575,7 @@ footer a{
     background: #000;
     border-radius: 1rem;
     transition: .5s;
+    margin: 0rem 1rem;
   }
   .menu a:hover{
     transition: .5s;
