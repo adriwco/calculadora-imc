@@ -13,7 +13,7 @@ ul{
 }
 /*----------------Header----------------*/
 header{
-  background: url('../img/img.jpg');
+  background: url('../img/img-svg.svg');
   background-size: cover;
   background-position: center;
 }
