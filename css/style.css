@@ -514,6 +514,11 @@ footer a{
   }
 }
 @media (max-width: 34.375rem){
+  header{
+    background: url('../img/img-mobile-svg.svg');
+    background-size: cover;
+    background-position: center;
+  }
   .header-container{
     flex-direction:row;
     background: #FEC63E;
