@@ -68,7 +68,7 @@ header{
 }
 .header-nav li{
   border: 1px solid black;
-  padding: 3px;
+  padding-left: 5px;
 }
 .header-nav a{
   display: block;
