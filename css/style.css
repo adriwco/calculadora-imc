@@ -5,7 +5,6 @@
 body{
   font-family:'Times New Roman', Times, serif;
   scroll-behavior: smooth;
-  margin-bottom: 30rem;
 }
 ::-webkit-scrollbar-track{
   background-color: #000;
@@ -388,6 +387,7 @@ h2::before{
 .redes-sociais ul{
   display: flex;
   justify-content: center;
+  gap: .5rem;
 }
 .svg{
   margin: 0rem 2px;
