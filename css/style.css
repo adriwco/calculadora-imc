@@ -4,6 +4,7 @@
 }
 body{
   font-family:'Times New Roman', Times, serif;
+  scroll-behavior: smooth;
 }
 ::-webkit-scrollbar-track{
   background-color: #000;
@@ -20,6 +21,11 @@ a{
 }
 ul{
   list-style: none;
+}
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 /*----------------Header----------------*/
 header{
@@ -222,7 +228,7 @@ h2::before{
 }
 #form button{
   width: 49.3%;
-  background-color: #202124;
+  background-color: #000;
   box-shadow: 0 0.125rem 0.313rem 0 rgba(0,0,0,0.25);
   color: #FEC63E;
   padding: .7rem;
@@ -275,8 +281,8 @@ h2::before{
   position: relative;
 }
 .item-indicadores {
-  background-color: #202124;
-  color: #ddd;
+  background-color: #0a0a0a;
+  color: #fff;
   margin: 1rem 0rem;
   padding: 0.3rem 0rem;
   border-radius: 0.25rem;
@@ -311,7 +317,7 @@ h2::before{
 }
 /*----------------Section Contato----------------*/
 #contato{
-  background: #202124;
+  background: #0a0a0a;
 }
 #container-contato{ 
   max-width: 75rem;
@@ -431,7 +437,7 @@ svg:hover path {
 }
 /*----------------footer----------------*/
 footer{
-  background: #17181a;
+  background: #000;
   color: #fff;
 }
 footer a{
