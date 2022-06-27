@@ -294,3 +294,5 @@ $('img.svg').each(function(){
 			$img.replaceWith($svg);
 		});
 	});
+
+	
