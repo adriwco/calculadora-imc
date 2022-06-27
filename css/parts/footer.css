@@ -1,0 +1,35 @@
+footer{
+  background: #000;
+  color: #fff;
+}
+footer a{
+  color: #fff;
+  text-decoration: underline;
+}
+.footer{ 
+  max-width: 75rem;
+  margin: 0rem auto;
+  padding: 2.5rem 0rem;
+  text-align: center;
+}
+.footer a:hover{
+  color: #FEC63E;
+}
+/*----------------Voltar ao topo button----------------*/
+.topo{
+  background: rgb(247, 244, 244,.5);
+  position: fixed;
+  bottom: 1.25rem;
+  right: -31.25rem;
+  height: 3.125rem;
+  width: 3.125rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s all;
+}
+.show-button .topo{
+  right: 1.25rem;
+  transition: .4s all;
+}

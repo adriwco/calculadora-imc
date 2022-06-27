@@ -1,0 +1,147 @@
+.main-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #FEC63E;
+}
+.main-descricao{
+  padding: 6rem 1.875rem;
+}
+.main-descricao h2{
+  font-size: 1.8rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+h2::before{
+  content: "";
+  position: absolute;
+  background: #FEC63E;
+  height: 0.3rem;
+  width: 4.5rem;
+  top: 2.813rem;
+  left: calc(50% - 2.25rem);
+  border-radius: 1rem;
+}
+.main-descricao p{
+  margin: 0rem auto;
+  font-size: 1.5rem;
+  max-width: 50rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+.descricao-detalhe{
+  max-width: 75rem;
+  margin: 0rem auto;
+  position: relative;
+}
+.descricao-detalhe p{
+  position: absolute;
+  max-width: 14.375rem;
+  text-align: start;
+  right: 0rem;
+  font-size: 1.1rem;
+  color: rgb(116, 114, 114);
+}
+.formula{
+  white-space: nowrap;
+}
+/*------------container e resultado-----------*/
+.container-cal-resul{
+  background: #FEC63E;
+}
+.main-grid{
+  max-width: 75rem;
+  margin: 0rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 6rem 1rem;
+}
+.main-grid h2{
+  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  position: relative;
+  grid-column: 1/-1;
+}
+.main-grid h2::before{
+  background: #000;
+}
+.container-main{
+  width: 100%;
+  margin: 0rem auto;
+  background: #FEC63E;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+}
+#form{
+  margin: 1rem 0rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+#form label{
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: .25rem;
+  width: 6.25rem;
+  text-align: right;
+  text-transform: uppercase;
+  position: relative;
+}
+#form input,select{
+  border: 0.188rem solid transparent;
+  border-radius: 0.25rem;
+  height: 2rem;
+  text-align: center;
+}
+#form select{
+  height: 2.4rem;
+}
+#form input:hover,select:hover{
+  border-color: #000;
+}
+.buttons{
+  grid-column: 1/-1;
+}
+#form button{
+  width: 49.3%;
+  background-color: #000;
+  box-shadow: 0 0.125rem 0.313rem 0 rgba(0,0,0,0.25);
+  color: #FEC63E;
+  padding: .7rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.25rem;
+}
+#form button:hover{ 
+  box-shadow: 0 0 1em #fff;
+}
+#form #submit{
+  color: #fff;
+}
+#form #clean{
+  color: #fff;
+  background: #6e1b1b;
+}
+#resultado{
+  margin: 1rem 2.5rem;
+  box-shadow: 0 0 .5em black;
+  border-radius: 0.25rem;
+  padding: 1rem 0rem;
+  background: #fcd16c;
+}
+#resultado p{
+  padding: 1rem 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+#resultado .grid-resultado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.observacoes{
+  margin: 1rem 2.5rem;
+}
