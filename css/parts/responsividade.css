@@ -46,11 +46,6 @@
   }
 }
 @media (max-width: 34.375rem){
-  header{
-    background: url('../../img/img-mobile-svg.svg');
-    background-size: cover;
-    background-position: center;
-  }
   .header-container{
     flex-direction:row;
     background: #FEC63E;
@@ -102,7 +97,7 @@
     display: block;
     position: absolute;
     width: 100%;
-    top: 4.3rem;
+    top: 3.2rem;
     right: 0rem;
     z-index: -1;
     background: #FEC63E;
@@ -115,6 +110,7 @@
     transition: .3s;
   }
   .nav.active .menu{
+    padding-top: 2rem;
     z-index: 10;
     max-height: 15rem;
   }
