@@ -2,6 +2,11 @@
   #resultado .grid-resultado{
     flex-direction: column;
   }
+  header{
+    background: url('../../img/background-header-mobile.webp');
+    background-size: cover;
+    background-position: center;
+  }
 }
 @media (max-width: 46.875rem){
   .header-container{
