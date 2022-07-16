@@ -4,3 +4,5 @@ O meu projeto sobre o cálculo do índice de massa corporal, atualmente, resume-
 [IMC - Regras de Negócios.pdf](https://github.com/adriwco/calculadora-imc/files/8995056/IMC.-.Regras.de.Negocios.pdf) 27/06/2022
 
 https://user-images.githubusercontent.com/80191040/176103212-cf6953ad-b394-41f8-8c0f-e77c4eb4269a.mp4
+
+Em breve irei melhorar a qualidade das imagens e tentarei melhorar a acessibilidade.
