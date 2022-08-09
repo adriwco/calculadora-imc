@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og: type" content="website" />
+  <meta property="og: title" content="Calculadora do Índice de Massa Corporal" />
+  <meta property="og: description" content="O IMC é uma medida usada para calcular se uma pessoa está no peso ideal." />
+  <meta property="og: url" content="http://site.com" />
+  <meta property="og: image" content="http://site.com/img/favicon/apple-icon-72x72.png" />
+  <meta name="description" content="O IMC é uma medida usada para calcular se uma pessoa está no peso ideal.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="./img/favicon//ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Calculadora - IMC</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./img/favicon/manifest.json">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <header id="header">
+    <div class="sombra">
+      <div class="header-container">
+        <img width="65" height="65" src="./img/outros/simbolo.svg" alt="Logo IMC">
+        <div>
+          <nav class="nav header-nav">
+            <ul id="controls" class="menu" role="menu">
+              <li role="menuitem"><a href="#descricao">Introdução</a></li>
+              <li role="menuitem"><a href="#imc">IMC</a></li>
+              <li role="menuitem"><a href="#significado">Explicação</a></li>
+              <li role="menuitem"><a href="#contato">Contato</a></li>
+            </ul>
+            <button aria-label="Abrir Menu" type="button" id="btn-mobile" aria-haspopup="true" aria-controls="controls" aria-expanded="false"><span id="hamburger"></span></button>
+          </nav>
+        </div>
+      </div>
+      <div class="header-introducao">
+        <h1>Calcule o seu peso ideal<b>!</b></h1>
+      </div>
+    </div>
+  </header>
+  <main aria-label="O que é IMC e Calculadora">
+    <div id="descricao" class="main-descricao">
+      <h2>Calculadora do Índice de Massa Corporal</h2>
+      <p>O índice de massa corporal (IMC) pode ajudar a identificar qual é o seu peso ideal com base na sua idade, altura e sexo biológico. Com este indicador pode identificar as melhores rotinas para o controlo de peso. Inclusivamente identificar se está com o peso baixo ou com determinado nível de obesidade. A fórmula para encontrar o seu peso ideal: <strong class="formula">y / x²</strong>.</p>
+      <div class="descricao-detalhe">
+        <p>
+          <strong class="formula">y = massa corporal em quilos.</strong>
+          <strong class="formula">x = altura em metros.</strong>
+        </p>
+      </div>
+    </div>
+    <div id="imc" class="container-cal-resul">
+      <div class="main-grid">
+        <h2>Calculadora - IMC</h2>
+        <div class="container-main">
+          <form id="form">
+            <label for="sexo">Sexo: </label>
+            <select name="sexo" id="sexo">
+              <option value="selecione" selected disabled>Selecione...</option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+            </select>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" placeholder="Idade..." min="0" max="150">
+            <label for="altura">Altura:</label>
+            <input type="number" id="altura" placeholder="Metros..." min="0" max="3">
+            <label for="peso">Peso:</label>
+            <input type="number" id="peso" placeholder="Quilogramas..." min="0" max="450">
+            <div class="buttons">
+              <button aria-label="Limpar Campus" type="reset" id="clean">Limpar</button>
+              <button aria-label="Calcular IMC" type="button" id="submit">Calcular</button>
+            </div>
+          </form>
+        </div>
+        <div>
+          <div id="resultado">
+            <div class="grid-resultado">
+              <img src="./img/outros/simbolo.svg" alt="" width="200" height="200">
+              <p>Uma vida mais <br> saudável sempre!</p>
+            </div>
+          </div>
+          <div class="observacoes">
+            <h3>Observações:</h3>
+            <p>Estes valores são aproximações médias apenas e não têm valor científico. Consulte seu médico para uma avaliação personalizada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <section aria-label="Significado dos Indicadores IMC">
+    <div id="significado" class="section">
+      <div class="significado">
+        <h2>Explicação de Cada Indicador</h2>
+        <ul class="indicadores">
+          <li class="item-indicadores">
+            <div class="header-h3">
+              <h3>Peso Baixo</h3>
+            </div>
+            <div class="container-indicadores" tabindex="0">
+              <div class="p-indicadores">
+                <p>Ter um peso abaixo do normal é tão pouco saudável e tanto pior do que ter excesso de peso. Uma mulher tem um peso baixo quando o seu valor de IMC é inferior a 19, enquanto para um homem o limiar é 20. Um peso abaixo do normal pode ser provocado por diferentes fatores. Poderá ser uma decisão voluntária, como uma privação alimentar ou distúrbios do comportamento alimentar, como anorexia e bulimia, que necessitam do aconselhamento de um médico. Estes distúrbios alimentares podem atingir tanto homens como mulheres, independentemente da idade. Em muitas situações é necessário a intervenção do ambiente social e de especialistas, para poder realizar uma mudança de alimentação e de mentalidade a longo prazo. Entre as causas adicionais que provocam esta falta de peso, encontramos as doenças metabólicas como o hipertiroidismo ou a diabetes, parasitas, doenças inflamatórias intestinais como Síndrome de Crohn, intolerâncias alimentares ou doenças hepáticas. Também os fatores psíquicos, como o stress, podem ainda gerar falta de apetite, por conseguinte magreza extrema. Se estiver abaixo dos valores normais, deve consultar um médico para receber aconselhamento nutricional. É necessário ter em atenção começar a ter uma alimentação rica em nutrientes e calorias. O desporto e o aumento da massa muscular ajudam também a aumentar o peso.</p>
+              </div>
+            </div>
+          </li>
+          <li class="item-indicadores">
+            <div class="header-h3">
+              <h3>Peso Normal</h3>
+            </div>
+            <div class="container-indicadores" tabindex="0">
+              <div class="p-indicadores">
+                <p>Por peso normal entende-se o peso natural ou ideal de uma pessoa dependendo da idade e do sexo. Para as mulheres, é desejável ter um índice de massa corporal entre 19 e 24, enquanto para os homens o IMC deve situar-se entre 20 e 25. Estes intervalos indicam que existe uma perfeita harmonia entre o peso e a altura, ou seja, no que diz respeito à alimentação e saúde, tem feito, até hoje, muitas escolhas corretas. Uma alimentação equilibrada e uma dose suficiente de exercício ajudam a manter-se em forma.</p>
+              </div>
+            </div>
+          </li>
+          <li class="item-indicadores">
+            <div class="header-h3">
+              <h3>Excesso de Peso</h3>
+            </div>
+            <div class="container-indicadores" tabindex="0">
+              <div class="p-indicadores">
+                <p>O termo excesso de peso é relativo a três categorias: pré obesidade (o IMC está compreendido entre 24 e 30 para as mulheres e 25 e 30 para os homens), a obesidade (com um IMC entre 31 e 40 tanto para os homens como para as mulheres) e a obesidade grave (com um IMC superior a 40 tanto para os homens como para as mulheres). Se tiver peso a mais, deve em qualquer caso consultar um médico e um nutricionista, visto que existe o risco de desenvolver doenças cardiovasculares. Para ter um resultado mais confiável do seu tipo de excesso de peso, deve consultar o seu médico. Com a ajuda do médico poderá analisar a composição do seu corpo em termos de percentagem de massa gorda, massa muscular e água. A partir daqui, serão definidos os objetivos que não se concentrarão necessariamente apenas numa diminuição do peso corporal. Um instrumento particularmente apreciado para medir os seus progressos é a fita métrica. No início do seu novo programa alimentar, meça os seus pontos críticos: barriga, cintura e peito, em intervalos regulares ou quando se aperceber que as roupas estão lentamente a ficar mais largas, meça-os novamente. A vantagem: deste modo, eventuais oscilações de peso provocadas por retenção de líquidos ou pela menstruação, que se manifestam na balança como quilos a mais, não irão perturbar o seu humor. A fita métrica irá mostrar que continua a perder centímetros.</p>
+              </div>
+            </div>
+          </li>
+          <li class="item-indicadores">
+            <div class="header-h3">
+              <h3>Obesidade</h3>
+            </div>
+            <div class="container-indicadores" tabindex="0">
+              <div class="p-indicadores">
+                <p>Por obesidade entende-se a obesidade patológica que pode atingir homens, mulheres e crianças, sem distinção de classes sociais. Nos homens e nas mulheres falamos de obesidade quando o IMC está compreendido entre 30 e 40 e de obesidade grave quando IMC é superior a 40. Caso tenha um valor destes, aconselhamos que consulte o seu médico de família para controlar o estado de saúde, a pressão arterial e os valores do sangue. As doenças cardiovasculares estão frequentemente associadas a um IMC elevado, por exemplo. Neste caso, até mesmo a distribuição de massa gorda tem um papel fundamental. Nas pessoas que apresentam um corpo “em forma de maçã” a maior parte das reservas de gordura deposita-se na região abdominal e também à volta dos órgãos internos. Estas pessoas estão, por isso, mais sujeitas ao risco de sofrerem de doenças cardiovasculares no futuro. As pessoas com um corpo “em forma de pera”, em que as camadas de gordura se acumulam normalmente nas ancas e coxas, correm menos esse risco. Se o corpo receber demasiada energia, mais do que aquela que consegue gastar, esta transforma-se em gordura. Com o tempo, acumulam-se alguns quilos em excesso. Entre os motivos adicionais para um aumento de peso tão elevado, estão também as doenças metabólicas, como por exemplo o hipertiroidismo ou diabetes, além dos desequilíbrios hormonais da gravidez ou da menopausa. Se sofre de obesidade e obesidade grave é absolutamente necessário que reduza o seu peso corporal. Desta forma, não é apenas o seu aparelho locomotor que se torna mais leve, mas, a cada quilo perdido, diminui o seu risco de doenças cardiovasculares, câncer, diabetes, gota, enfarte ou trombose.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="contato" aria-label="Contatos, Navegação(Menu) e Redes Sociais">
+    <div id="container-contato">
+      <div class="contato">
+        <div class="container-contato">
+          <div class="contato">
+            <div class="container-form-contato">
+              <h3>Contato</h3>
+              <ul>
+                <li><a class="email" href="mailto:adriwco@gmail.com">adriwco@gmail.com</a></li>
+                <li><a href="tel:+5585986436235">+55 (85) 98643-6235</a></li>
+                <li><a href="tel:+35162655782">+351 962 655 782</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="navegacao">
+            <div class="container-form-navegacao">
+              <h3>Navegação</h3>
+              <nav class="nav">
+                <ul class="menu" role="menu">
+                  <li role="menuitem"><a href="#header">Início</a></li>
+                  <li role="menuitem"><a href="#descricao">Introdução</a></li>
+                  <li role="menuitem"><a href="#imc">IMC</a></li>
+                  <li role="menuitem"><a href="#significado">Explicação</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="grid-redes-sociais">
+            <div class="redes-sociais">
+              <h3>Redes Sociais</h3>
+              <ul>
+                <li><a href="https://github.com/adriwco/" target="_blank" aria-label="GitHub"><img width="60" height="60" class="svg" src="./img/rede-sociais/github.svg" alt="GitHub"></a></li>
+                <li><a href="https://www.linkedin.com/in/adriweverton/" target="_blank" aria-label="LinkedIn"><img width="60" height="60" class="svg" src="./img/rede-sociais/linkedin.svg" alt="LinkedIn"></a></li>
+                <li><a href="https://twitter.com/adriwco/" target="_blank" aria-label="Twitter"><img width="60" height="60" class="svg" src="./img/rede-sociais/twitter.svg" alt="Twitter"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer">
+      <p><a href="https://choosealicense.com/licenses/mit/#" target="_blank">&copy; 2022 Adriano Weverton Cruz Oliveira</a> <br> Student of <a href="https://www.origamid.com/" target="_blank">Origamid</a> & <a href="https://descomplica.com.br/faculdade/" target="_blank">Uncomplicates Digital College</a></p>
+    </div>
+  </footer>
+  <div id="scrollFixed" data-scroll="suave" data-anima="scroll">
+    <a href="#header">
+      <div class="topo">
+        <img width="32" height="32" src="./img/outros/circle-up.svg" alt="voltar ao topo">
+      </div>
+    </a>
+  </div>
+  <script defer src="./js/utils/jquery-3.5.1.min.js"></script>
+  <script defer src="./js/utils/jquery.mask.min.js"></script>
+  <script defer src="./js/process/regra-funcional-imc.min.js"></script>
+</body>
+
+</html>

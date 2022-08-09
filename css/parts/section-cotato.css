@@ -1,0 +1,124 @@
+#contato{
+  background: #0a0a0a;
+}
+#container-contato{ 
+  max-width: 75rem;
+  margin: 0rem auto;
+  padding: 6rem 1.875rem;
+  min-height: 10rem;
+}
+.container-contato{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+}
+.container-contato a:hover{
+  color: #FEC63E !important;
+}
+.container-contato h3{
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.container-contato h3::after{
+  position: absolute;
+  content: '';
+  background: #FEC63E;
+  width: 2.5rem;
+  height: 0.2rem;
+  top: 1.8rem;
+  right: 40%;
+  border-radius: 1rem;
+}
+.container-form-contato a{
+  color: #fff;
+  text-decoration: underline;
+  text-align: left;
+}
+.container-form-contato a{
+  display: inline-block;
+  text-align: left;
+  padding-bottom: 1rem;
+  width: 10rem;
+  margin: 0rem auto;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.container-form-contato a::after{
+  position: absolute;
+  content: '';
+  height: 0.938rem;
+  width: 0.938rem;
+  border-radius: 50%;
+  left: -0.313rem;
+  top: 0.188rem;
+  background: url('../../img/contato/telefone.svg') no-repeat;
+  background-size: cover;
+}
+.container-form-contato .email::after{
+  background: url('../../img/contato/email.svg') no-repeat;
+  background-size: cover;
+}
+.redes-sociais{
+  color: #fff;
+  margin: 1rem auto;
+  max-width: 12rem;
+  text-align: center;
+}
+/*------------------------------*/
+.redes-sociais ul{
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+.svg{
+  margin: 0rem 2px;
+  border: 2px solid #fcd16c;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  box-shadow: 0 0.125rem 0.938rem 0 rgba(238, 235, 235, 0.25);
+}
+svg:hover path {
+  fill: #FEC63E;
+}
+/*------------------------------*/
+.container-form-navegacao{
+  max-width: 12rem;
+  margin: 1rem auto;
+  color: #fff;
+}
+.navegacao .menu{
+  color: #fff !important;
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+  background: transparent;
+  top: 0rem;
+}
+.navegacao .menu li{
+  margin-bottom: 1rem;
+}
+.navegacao .menu a{
+  padding: 0rem 1.5rem;
+  color: #fff;
+  background: transparent;
+  text-decoration: underline;
+  position: relative;
+}
+.navegacao .menu a::after{
+  position: absolute;
+  content: '';
+  background: #FEC63E; 
+  height: 0.438rem;
+  width:  0.438rem;
+  border-radius: 50%;
+  left: 0.313rem;
+  top: 0.313rem;
+}
+.container-form-contato{
+  width: 12rem;
+  color: #fff;
+  margin: 1rem auto;
+  text-align: center;
+}

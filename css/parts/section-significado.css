@@ -1,0 +1,50 @@
+.section{
+  max-width: 75rem;
+  margin: 0rem auto;
+  padding: 6rem 1.875rem;
+}
+.significado h2{
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+.item-indicadores {
+  background-color: #0a0a0a;
+  color: #fff;
+  margin: 1rem 0rem;
+  padding: 0.3rem 0rem;
+  border-radius: 10px;
+  box-shadow: 0 0.125rem 0.313rem 0 rgba(0,0,0,0.25);
+  border: 3px solid #fff;
+}
+.item-indicadores:hover{
+  border: 3px solid #fcd16c;
+}
+.header-h3 {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.header-h3::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.header-h3.active::after {
+  content: "\2212";
+}
+.container-indicadores {
+  max-height: 0rem;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.p-indicadores{
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 0.063rem solid;
+  border-image: linear-gradient(to right, transparent, orange, transparent) 1;
+}
