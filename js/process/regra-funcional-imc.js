@@ -85,6 +85,24 @@ let imcRules = {
 let imcText = ["desnutrição grau V", "desnutrição grau IV", "desnutrição grau III", "desnutrição grau II", "desnutrição grau I", "normal", "pré-obesidade", "obesidade grau I", "obesidade grau II", "obesidade grau III"];
 
 function imcGenero(idade, imc, sexo) {
+	let keyValue = imcRules[Object.keys(imcRules)[idade > 64 ? 6 : 0]];
+
+	for (let t = 0; t < keyValue.length; t++) {
+		let value = sexo == 'masculino' ? keyValue[t] : keyValue[t] - 0.5;
+		if (imc <= keyValue[8]) {
+			if (imc < value) {
+				return imcText[t];
+			}
+		} else {
+			break;
+		}
+	}
+
+	return imcText[9];
+}
+
+/*
+function imcGenero(idade, imc, sexo) {
 	let keys = Object.keys(imcRules);
 	for (let k = 0; k < keys.length; k++) {
 
@@ -124,6 +142,7 @@ function imcGenero(idade, imc, sexo) {
 	}
 	return imcText[imcText.length - 1];
 }
+*/
 
 function imcCalculo(altura, peso) {
 	var resultadoIMC = (peso / (altura * altura)).toFixed(2);
